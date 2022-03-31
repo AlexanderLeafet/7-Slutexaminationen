@@ -1,0 +1,32 @@
+.graphicLeft {
+    float: left;
+    
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.graphicRight {
+    float: right;
+    height: 100%;
+}
+
+.landing {
+    background: #38846d;
+    min-height: 100vh;
+}
+
+.logoImg {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: auto;
+}
+.rowClass{
+    min-height: 100vh;
+}
