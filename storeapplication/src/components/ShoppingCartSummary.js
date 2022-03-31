@@ -19,6 +19,9 @@ function ShoppingCartSummary() {
           <Title level={2} className="menuTitle">
             Din beställning
           </Title>
+          <Title level={2} className="menuTitle">
+            Din beställning
+          </Title>
         </Col>
 
         </Row>
