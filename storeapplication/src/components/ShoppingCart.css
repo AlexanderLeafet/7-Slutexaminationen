@@ -1,0 +1,32 @@
+.cartCircle {
+    min-width: 5em;
+    min-height: 5em;
+    border-radius: 50%;
+    background: #2F2926;
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+    border: 0em;
+}
+
+.shoppingBagImage {
+    position: absolute;
+    right: 2.7em;
+    top: 2.9em;
+    min-width: 1.5em;
+}
+
+.cartCounter{
+color: white;
+text-align: center;
+} 
+.countCircle{
+    min-width: 2em;
+    max-height: 2em;
+    border-radius: 50%;
+    background: coral;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border: 0em;
+}

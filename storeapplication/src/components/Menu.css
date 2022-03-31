@@ -1,0 +1,23 @@
+.menuTitle {
+    font-family: PT Serif;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.footerImg{
+    width: 100%;
+    margin-top: auto;
+}
+
+.headerImg{
+    width: 100%;
+}
+
+.menu{
+    min-height: 100vh;
+    background: #f3e4e1;
+    display: flex;
+    flex-direction: column;
+    
+}
