@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { createStore } from "redux";
 import CounterReducer from "./reducers/CounterReducer.js";
+import AddItemToCartReducer from "./reducers/AddItemToCartReducer.js";
 import { Provider } from "react-redux";
 /*
  * Store - Hanterar state
@@ -19,9 +20,15 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSIONS__ && window.__REDUX_DEVTOOLS_EXTENSIONS__()
 );
 
+// const store = createStore(
+//   AddItemToCartReducer,
+//   window.__REDUX_DEVTOOLS_EXTENSIONS__ && window.__REDUX_DEVTOOLS_EXTENSIONS__()
+// );
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}> {/**Gör store tillgänglig för hela React-appen**/}
+    <Provider store={store}>
+      {/** <Provider store={store}> Gör store tillgänglig för hela React-appen**/}
       <BrowserRouter>
         <App />
       </BrowserRouter>

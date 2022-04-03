@@ -1,5 +1,7 @@
 import "./ShoppingCartSummary.css";
 import { Row, Col, Typography } from "antd";
+import "antd/dist/antd.min.css";
+import ShoppingCartItem from "./ShoppingCartItem.js";
 
 function ShoppingCartSummary() {
     const { Title } = Typography;
@@ -10,18 +12,7 @@ function ShoppingCartSummary() {
         <Title level={2} className="menuTitle">
             Din beställning
           </Title>
-          <Title level={2} className="menuTitle">
-            Din beställning
-          </Title>
-          <Title level={2} className="menuTitle">
-            Din beställning
-          </Title>
-          <Title level={2} className="menuTitle">
-            Din beställning
-          </Title>
-          <Title level={2} className="menuTitle">
-            Din beställning
-          </Title>
+          <ShoppingCartItem/>
         </Col>
 
         </Row>

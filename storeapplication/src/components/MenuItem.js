@@ -2,6 +2,7 @@ import "../components/MenuItem.css";
 import React from "react";
 import addImg from "../graphics/add.svg";
 import { Row, Col } from "antd";
+import "antd/dist/antd.min.css";
 import {increment, decrement} from "../actions/CounterActions";
 import {useDispatch} from "react-redux";
 
@@ -15,8 +16,8 @@ function MenuItem({ title, desc, price }) {
 
   function AddToCart(){
     IncreaseCartCounter();
-  }
 
+  }
 
   return (
     <div className="menuItem">
@@ -24,7 +25,7 @@ function MenuItem({ title, desc, price }) {
         <Col className="left" xs={2} sm={2} md={2} lg={2} xl={2} />
         <Col className="left" xs={3} sm={3} md={3} lg={3} xl={3}>
           <div className="circle">
-            <img src={addImg} className="addImg" onClick={AddToCart}/>
+            <img src={addImg} className="addImg" onClick={AddToCart} alt="+"/>
           </div>
         </Col>
         <Col

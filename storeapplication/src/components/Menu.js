@@ -1,7 +1,8 @@
 import "../components/Menu.css";
 import { React, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import "antd/dist/antd.css";
+//import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import { Row, Col, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import graphicHeader from "../graphics/graphics-header.svg";
