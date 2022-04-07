@@ -10,7 +10,7 @@
 }
 
 .summary:after {
-    bottom: 100%;
+    bottom: 99.9%;
     left: 90%;
     border: solid transparent;
     content: " ";

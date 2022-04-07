@@ -1,15 +1,14 @@
 import "../components/ShoppingCartItem.css";
 import React from "react";
-import addImg from "../graphics/add.svg";
 import { Row, Col, Typography, Button } from "antd";
 import "antd/dist/antd.min.css";
-import { increment, decrement } from "../actions/CounterActions";
-import { useDispatch } from "react-redux";
 import arrowUp from "../graphics/arrow-up.svg";
 import arrowDown from "../graphics/arrow-down.svg";
 
-function ShoppingCartItem() {
+function ShoppingCartItem({ title, price, id, quantity }) {
   const { Title } = Typography;
+
+//Bryta ut knapp + total till egen komponent
 
   return (
     <div className="ShoppingCartItem">
@@ -23,16 +22,16 @@ function ShoppingCartItem() {
           xl={18}
           style={{ marginBottom: "1em" }}
         >
-          <h3 className="itemHeader">Bryggkaffe{}</h3>
+          <h3 className="itemHeader">{title}</h3>
           <p className="underlineSummary">....................</p>
-          <p className="price">98 kr</p>
+          <p className="price">{price}kr</p>
         </Col>
         <Col xs={2} sm={2} md={2} lg={2} xl={2}
          />
         <Col xs={1} sm={1} md={1} lg={1} xl={1}>
           <div className="quantity">
             <img src={arrowUp} className="arrowImage" />
-            <p className="amount">2</p>
+            <p className="amount">{quantity}</p>
             <img src={arrowDown} className="arrowImage" />
           </div>
         </Col>

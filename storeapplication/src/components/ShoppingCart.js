@@ -19,7 +19,7 @@ function ShoppingCart() {
     </>
   ) : null}
       <div className="countCircle">
-        <p className="cartCounter">{counter}</p>
+         <p className="cartCounter">1</p> {/*{counter} */}
       </div>
     </div>
   );

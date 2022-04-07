@@ -5,18 +5,24 @@ import { Row, Col } from "antd";
 import "antd/dist/antd.min.css";
 import {increment, decrement} from "../actions/CounterActions";
 import {useDispatch} from "react-redux";
-
-function MenuItem({ title, desc, price }) {
+import {addProduct} from "../reducers/productSlice";
+function MenuItem({ title, desc, price, id, quantity }) {
 
   const dispatch = useDispatch();
 
-  function IncreaseCartCounter(){
-    dispatch(increment(1));
-  }
+  // function IncreaseCartCounter(){
+  //   dispatch(increment(1));
+  // }
 
-  function AddToCart(){
-    IncreaseCartCounter();
-
+  function AddToCart(title, price, desc, id, quantity){
+    // IncreaseCartCounter();
+    dispatch(addProduct({
+      title: title,
+      price: price,
+      desc: desc,
+      id: id,
+      quantity: quantity
+    }))
   }
 
   return (
@@ -25,7 +31,7 @@ function MenuItem({ title, desc, price }) {
         <Col className="left" xs={2} sm={2} md={2} lg={2} xl={2} />
         <Col className="left" xs={3} sm={3} md={3} lg={3} xl={3}>
           <div className="circle">
-            <img src={addImg} className="addImg" onClick={AddToCart} alt="+"/>
+            <img src={addImg} className="addImg" onClick={() => AddToCart(title, price, desc, id, quantity)} alt="+"/>
           </div>
         </Col>
         <Col
