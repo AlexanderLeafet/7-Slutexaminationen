@@ -9,24 +9,19 @@ import graphicHeader from "../graphics/graphics-header.svg";
 import graphicFooter from "../graphics/graphics-footer.svg";
 import MenuItem from "../components/MenuItem.js";
 import ShoppingCart from "../components/ShoppingCart.js";
-import {useSelector, useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Menu() {
   const { Title } = Typography;
   const dispatch = useDispatch();
 
-   const [products, setProducts] = useState([{}]); // const [products, setProducts] = useState([{}]);
-   const AddedProducts = useSelector((state) => state);
-   console.log(AddedProducts);
+  const [products, setProducts] = useState([{}]); // const [products, setProducts] = useState([{}]);
 
   useEffect(() => {
     async function getProducts() {
       const response = await fetch("http://localhost:5000/api/beans");
       const data = await response.json();
-      console.log("Från API: ", data.menu);
-      // dispatch(addAllItemsToCart(data.menu));
       setProducts(data.menu);
-      
     }
     getProducts();
   }, []);
@@ -36,7 +31,7 @@ function Menu() {
       <Row>
         <Col className="left" xs={24} sm={24} md={24} lg={24} xl={24}>
           <img className="headerImg" src={graphicHeader} />
-          <ShoppingCart/>
+          <ShoppingCart />
         </Col>
       </Row>
       <Row>
@@ -49,18 +44,16 @@ function Menu() {
       <Row>
         <Col className="left" xs={24} sm={24} md={24} lg={24} xl={24}>
           {products.map((product) => {
-            console.log(product)
-            if (product.id != "7") {
-              return (
-                <MenuItem
-                  title={product.title}
-                  desc={product.desc}
-                  price={product.price}
-                  id={product.id}
-                  quantity={1}
-                />
-              );
-            }
+            return (
+              <MenuItem
+                title={product.title}
+                desc={product.desc}
+                price={product.price}
+                key={product.id}
+                id={product.id}
+                quantity={1}
+              />
+            );
           })}
         </Col>
       </Row>

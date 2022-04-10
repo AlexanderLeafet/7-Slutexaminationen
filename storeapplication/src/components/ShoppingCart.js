@@ -6,9 +6,10 @@ import ShoppingCartSummary from "../components/ShoppingCartSummary.js";
 
 
 function ShoppingCart() {
+    const [toggle, setToggle] = useState(false);
+    //const counter = useSelector((state) => { return state.counter});
 
-    const [toggle, setToggle] = useState(true);
-    const counter = useSelector((state) => { return state.counter});
+    const cartCounter = useSelector((state) => state.cartCounter);
   return (
     <div className="shoppingCart">
       <button className="cartCircle"></button>
@@ -19,7 +20,7 @@ function ShoppingCart() {
     </>
   ) : null}
       <div className="countCircle">
-         <p className="cartCounter">1</p> {/*{counter} */}
+         <p className="cartCounter">{cartCounter.value}</p> {/*{counter} */}
       </div>
     </div>
   );

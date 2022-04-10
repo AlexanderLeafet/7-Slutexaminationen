@@ -1,34 +1,9 @@
-.ShoppingCartItem{
-    max-height: 6em;
-}
+
 .underlineSummary{
     margin-left: 9em;
         letter-spacing: 0.3em;
         margin-top: -1.90em;
         margin-bottom: -0em;
-}
-
-.amount{
-    font-size: 1.2em;
-    font-style: normal;
-    font-weight: 700;
-    margin: 0;
-}
-
-.arrowImage{
-    width: 0.7em;
-}
-.quantity{
-    padding-top: -10em;
-}
-
-.itemHeader{
-    margin-top: 0.5em;
-}
-
-.price{
-    font-style: normal;
-    font-weight: 600;
 }
 
 .totalHeader{
@@ -57,7 +32,7 @@
 }
 
 .totalRow{
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 .buttonRow{
@@ -72,11 +47,8 @@
     background-color: black;
     border: none;
     font-weight: 500;
+    margin-bottom: 1em;
 }
 .submitButton:focus, .ant-btn-primary:hover {
     background-color: black;
-}
-
-.quantityColumn{
-    text-align: center;
 }
