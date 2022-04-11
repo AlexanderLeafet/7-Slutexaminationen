@@ -1,10 +1,12 @@
+import SummaryFooter from "./SummaryFooter.js";
+import ShoppingCartItem from "./ShoppingCartItem.js";
+
 import "./ShoppingCartSummary.css";
+
+import { useSelector } from "react-redux";
+import { React } from "react";
 import { Row, Col, Typography } from "antd";
 import "antd/dist/antd.min.css";
-import ShoppingCartItem from "./ShoppingCartItem.js";
-import { useSelector } from "react-redux";
-import SummaryFooter from "./SummaryFooter.js";
-import { React } from "react";
 
 function ShoppingCartSummary() {
   const addedProducts = useSelector((state) => state.products);

@@ -1,51 +1,51 @@
-import "../components/ShoppingCartItem.css";
-import React from "react";
-import { Row, Col, Typography, Button } from "antd";
-import "antd/dist/antd.min.css";
-import arrowUp from "../graphics/arrow-up.svg";
-import arrowDown from "../graphics/arrow-down.svg";
 import {
   incrementProductQuantity,
   decrementProductQuantity,
-  removeProduct
+  removeProduct,
 } from "../reducers/productSlice";
-import {incrementCartCounter, decrementCartCounter} from "../reducers/cartCounterSlice";
+import {
+  incrementCartCounter,
+  decrementCartCounter,
+} from "../reducers/cartCounterSlice";
+import "../components/ShoppingCartItem.css";
+import arrowUp from "../graphics/arrow-up.svg";
+import arrowDown from "../graphics/arrow-down.svg";
+
 import { useDispatch } from "react-redux";
+import React from "react";
+import { Row, Col } from "antd";
+import "antd/dist/antd.min.css";
 
 
-function ShoppingCartItem({ title, price, quantity, id}) {
+function ShoppingCartItem({ title, price, quantity, id }) {
   const dispatch = useDispatch();
 
   function incrementQuantity() {
     dispatch(
       incrementProductQuantity({
-        id: id
+        id: id,
       })
     );
 
-    dispatch(
-      incrementCartCounter()
-    );
+    dispatch(incrementCartCounter());
   }
 
   function decrementQuantity() {
     dispatch(
       decrementProductQuantity({
-        id: id
+        id: id,
       })
     );
 
-    if(quantity === 1){
+    if (quantity === 1) {
       dispatch(
         removeProduct({
-          id: id
+          id: id,
         })
-        )
-    };
+      );
+    }
 
-    dispatch(
-      decrementCartCounter()
-    );
+    dispatch(decrementCartCounter());
   }
 
   return (

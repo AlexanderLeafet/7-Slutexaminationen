@@ -1,21 +1,18 @@
-import "../components/Menu.css";
-import { React, useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-//import "antd/dist/antd.css";
-import "antd/dist/antd.min.css";
-import { Row, Col, Typography } from "antd";
-import { useNavigate } from "react-router-dom";
-import graphicHeader from "../graphics/graphics-header.svg";
-import graphicFooter from "../graphics/graphics-footer.svg";
 import MenuItem from "../components/MenuItem.js";
 import ShoppingCart from "../components/ShoppingCart.js";
-import { useDispatch } from "react-redux";
+
+import "../components/Menu.css";
+import graphicHeader from "../graphics/graphics-header.svg";
+import graphicFooter from "../graphics/graphics-footer.svg";
+
+import { React, useState, useEffect } from "react";
+import { Row, Col, Typography } from "antd";
+import "antd/dist/antd.min.css";
 
 function Menu() {
   const { Title } = Typography;
-  const dispatch = useDispatch();
 
-  const [products, setProducts] = useState([{}]); // const [products, setProducts] = useState([{}]);
+  const [products, setProducts] = useState([{}]); 
 
   useEffect(() => {
     async function getProducts() {
@@ -43,13 +40,13 @@ function Menu() {
       </Row>
       <Row>
         <Col className="left" xs={24} sm={24} md={24} lg={24} xl={24}>
-          {products.map((product) => {
+          {products.map((product, index) => {
             return (
               <MenuItem
                 title={product.title}
                 desc={product.desc}
                 price={product.price}
-                key={product.id}
+                key={index}
                 id={product.id}
                 quantity={1}
               />

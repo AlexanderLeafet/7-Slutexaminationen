@@ -1,13 +1,13 @@
 import "../components/Landing.css";
-import { React, useEffect } from "react";
-import ReactDOM from "react-dom";
-import { useNavigate  } from "react-router-dom";
-//import "antd/dist/antd.css";
-import "antd/dist/antd.min.css";
-import { Row, Col } from "antd";
 import graphicLeft from "../graphics/intro-graphic-left.svg";
 import graphicRight from "../graphics/intro-graphic-right.svg";
 import logo from "../graphics/airbean-landing.svg";
+
+import { React, useEffect } from "react";
+import { useNavigate  } from "react-router-dom";
+
+import { Row, Col } from "antd";
+import "antd/dist/antd.min.css";
 
 function Landing() {
   const navigate = useNavigate();

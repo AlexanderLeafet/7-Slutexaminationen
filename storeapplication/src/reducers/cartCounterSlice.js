@@ -11,10 +11,12 @@ reducers: {
     }, 
     decrementCartCounter : function(state){
         state.value -= 1
+    },
+    resetCartCounter : function(state){
+        state.value = 0
     }
 }
 });
 
-export const {incrementCartCounter} = cartCounterSlice.actions;
-export const {decrementCartCounter} = cartCounterSlice.actions;
+export const {incrementCartCounter, decrementCartCounter, resetCartCounter} = cartCounterSlice.actions;
 export default cartCounterSlice.reducer;

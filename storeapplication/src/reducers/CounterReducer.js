@@ -1,4 +1,3 @@
-// Reducer - uppdaterar state i store
 const initialState = {
     counter: 0
 }

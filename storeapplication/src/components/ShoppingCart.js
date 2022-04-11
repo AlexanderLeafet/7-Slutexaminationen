@@ -1,13 +1,13 @@
-import "./ShoppingCart.css";
-import ShoppingBagImage from "../graphics/bag.svg";
-import {useSelector} from "react-redux";
-import { React, useState } from "react";
 import ShoppingCartSummary from "../components/ShoppingCartSummary.js";
 
+import "./ShoppingCart.css";
+import ShoppingBagImage from "../graphics/bag.svg";
+
+import {useSelector} from "react-redux";
+import { React, useState } from "react";
 
 function ShoppingCart() {
     const [toggle, setToggle] = useState(false);
-    //const counter = useSelector((state) => { return state.counter});
 
     const cartCounter = useSelector((state) => state.cartCounter);
   return (
@@ -20,7 +20,7 @@ function ShoppingCart() {
     </>
   ) : null}
       <div className="countCircle">
-         <p className="cartCounter">{cartCounter.value}</p> {/*{counter} */}
+         <p className="cartCounter">{cartCounter.value}</p>
       </div>
     </div>
   );

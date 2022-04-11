@@ -1,21 +1,18 @@
-import "../components/MenuItem.css";
-import React from "react";
-import addImg from "../graphics/add.svg";
-import { Row, Col } from "antd";
-import "antd/dist/antd.min.css";
-import { increment, decrement } from "../actions/CounterActions";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../reducers/productSlice";
 import { incrementCartCounter } from "../reducers/cartCounterSlice";
+
+import "../components/MenuItem.css";
+import addImg from "../graphics/add.svg";
+
+import React from "react";
+import { Row, Col } from "antd";
+import "antd/dist/antd.min.css";
+
 function MenuItem({ title, desc, price, id, quantity }) {
   const dispatch = useDispatch();
 
-  // function IncreaseCartCounter(){
-  //   dispatch(increment(1));
-  // }
-
   function AddToCart(title, price, desc, id, quantity) {
-    // IncreaseCartCounter();
     dispatch(
       addProduct({
         title: title,
